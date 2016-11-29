@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#80E8D67D"
+        android:elevation="4dp"
+        tools:ignore="UnusedAttribute" />
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+        <FrameLayout
+            android:id="@+id/container_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#80E8D67D"
+            android:fitsSystemWindows="true">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80E8D67D">
+                <include
+                    layout="@layout/navigation_header"
+                    android:id="@+id/nav_header" />
+                <ListView
+                    android:id="@+id/nav_menu"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="start"
+                    android:background="#80E8D67D" />
+            </LinearLayout>
+        </android.support.design.widget.NavigationView>
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

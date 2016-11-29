@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">MyAttandance</string>
+    <string-array name="notesTypes">
+      <item>@string/Sick</item>
+      <item>@string/AllowedLate</item>
+      <item>@string/PaidLeave</item>
+      <item>@string/EarlyLeave</item>
+      <item>@string/Overtime</item>
+    </string-array>
+  <string name="Overtime">Overtime</string>
+  <string name="Sick">Sick</string>
+  <string name="AllowedLate">Allowed Late</string>
+  <string name="EarlyLeave">Early Leave</string>
+  <string name="PaidLeave">Paid Leave</string>
+  <string name="openDrawer">Drawer Open</string>
+  <string name="closeDrawer">Drawer Closed</string>
+
+</resources>

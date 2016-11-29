@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="MyAttandance.MyAttandance" android:versionCode="327681" android:versionName="1.0" android:installLocation="auto">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="19" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+  <application android:label="My Attandance" android:icon="@drawable/fingericon" android:theme="@style/StandardTheme" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:icon="@drawable/icon" android:label="MyAttandance" android:theme="@style/StandardTheme" android:name="md511b8ff716fc6dfa0a62ad1fd8b82f382.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <service android:name="md5f2f7e9254c347213e2f5ecf704279788.AppLocationService" />
+    <service android:name="md5f2f7e9254c347213e2f5ecf704279788.AutoAttendanceService" />
+    <receiver android:name="md5c1e3e7e879a876495c69c37f48ca4985.OnBootStartReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+      </intent-filter>
+    </receiver>
+    <receiver android:name="md5c1e3e7e879a876495c69c37f48ca4985.WifiReceivers">
+      <intent-filter>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+        <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+      </intent-filter>
+    </receiver>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="MyAttandance.MyAttandance.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.MyAttandance.MyAttandance" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>
